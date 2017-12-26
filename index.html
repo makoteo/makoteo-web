@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-<style>
-body{
-    margin:0;
-    overflow-x: hidden;
-    background: #0f212e;
-}
-header{
-    position: relative;
-    height: 1500px;
-}
-img {
-    width: 100%;
-    height: auto;
-    top: 0;
-    left: 0;
-}
-.layer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
+    <head>
+        <style>
+            body{
+                margin:0;
+                overflow-x: hidden;
+                background: #0f212e;
+            }
+            header{
+                position: relative;
+                height: 1500px;
+            }
+            img {
+                width: 100%;
+                height: auto;
+                top: 0;
+                left: 0;
+            }
+            .layer{
+                position: absolute;
+                bottom: 0;
+                left: 0;
+            }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #3a47c9;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #3a47c9;
+                position: fixed;
+                top: 0;
+                width: 100%;
+            }
 
-li {
-    float: left;
-}
+            li {
+                float: left;
+            }
 
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
 
-li a:hover:not(.active) {
-    background-color: #0f212e;
-}
+            li a:hover:not(.active) {
+                background-color: #0f212e;
+            }
 
-.active {
-    background-color: #6b57f0;
-}
-</style>
-</head>
+            .active {
+                background-color: #6b57f0;
+            }
+
+            .cover {
+                top: 90vw;
+                width: 100%;
+                background-color: #0f212e;
+                height: 500vw;
+                position: absolute;
+            }
+
+        </style>
+    </head>
 <body>
 <header>
     <img id="sky" class="layer parallax" data-offset="1" src="Sky.png"/>
@@ -66,11 +75,13 @@ li a:hover:not(.active) {
     <img id="logo" class="layer parallax" data-offset="-1" src="Logo.png"/>
 </header>
 <ul>
-  <li><a class="active" href="#home">OOOOF</a></li>
+  <li><a class="active" href="#home">Home</a></li>
   <li><a href="#work">Work</a></li>
   <li><a href="#blog">Blog</a></li>
   <li><a href="#about">About</a></li>
 </ul>
+
+<div class="cover" id="cover"></div>
 
 <script>
 var _els = document.getElementsByClassName('parallax');
@@ -81,26 +92,28 @@ for(var i =0; i < _els.length; i++){
     var el = _els[i];
     var offset = el.dataset.offset;
     _layers.push({el: el, y: 0, offset: offset});
-};
+}
 
 window.addEventListener('scroll', handle_scroll);
 requestAnimationFrame(animate);
 
 function handle_scroll(e){
-    _scrollY = window.scrollY;
+    //_scrollY = window.scrollY;
 }
 
 function animate(){
-    if(_scrollY < 1000){
-    for(var i =0; i < _layers.length; i++){
-        var oldY = _layers[i].y;
-        _layers[i].y = _scrollY * _layers[i].offset;
+    _scrollY = window.scrollY;
+    if(_scrollY < Math.sqrt(screen.width * screen.height)){
+        for(var i =0; i < _layers.length; i++){
+            var oldY = _layers[i].y;
+            _layers[i].y = _scrollY * _layers[i].offset;
 
-        if(oldY !== _layers[i].y){
-        _layers[i].el.style.transform = 'translate(0px , ' + _layers[i].y + 'px)';
-        }    
+            if(oldY !== _layers[i].y) {
+                _layers[i].el.style.transform = 'translate(0px , ' + _layers[i].y + 'px)';
+            }
+        }
     }
-    };
+
     requestAnimationFrame(animate);
 }
 
