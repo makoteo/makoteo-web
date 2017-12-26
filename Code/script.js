@@ -5,13 +5,11 @@ var _scrollY = window.scrollY;
 var month = new Date().toLocaleString('en-En',{month: "long"});
 var date = new Date().toLocaleString('en-En',{day: "numeric"});
 
-var _QuickPosts = [];
-
 console.log(month);
 console.log(date);
 
 //Christmas
-if(month == "December"){
+if(month = "December"){
     if (parseInt(date) >= 15 ) {
         console.log("Merry Christmas");
         document.getElementById("Mountain_Ice").removeAttribute("hidden");
@@ -22,7 +20,7 @@ if(month == "December"){
         document.getElementById("logo_santa_hat").removeAttribute("hidden");
         document.getElementById("foreground_ice").removeAttribute("hidden");
     }
-}else if(month == "January"){
+}else if(month = "January"){
     if (parseInt(date) <= 10 ) {
         console.log("Merry Christmas");
     }

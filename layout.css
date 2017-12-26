@@ -75,3 +75,24 @@ h1 {
     border: 0.5vw solid #0d1b26;
     background-color: #122838;
 }
+
+.icons{
+    background: url(PageButtons1.png);
+    background-size: 12.5vw 25vw;
+    width: 6.25vw;
+    height: 6.25vw;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 10px;
+}
+
+#la_btn{ background-position: 0px 0px; }
+#la_btn:hover{ background-position: 0px -6.25vw; }
+#la_btn:active{ background-position: 0px -12.5vw; }
+#la_btn:disabled{ background-position: 0px -18.75vw; }
+
+#ra_btn{ background-position: 6.25vw 0px; }
+#ra_btn:hover{ background-position: 6.25vw -6.25vw; }
+#ra_btn:active{ background-position: 6.25vw -12.5vw; }
+#ra_btn:disabled{ background-position: 6.25vw -18.75vw; }
