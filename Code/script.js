@@ -9,6 +9,21 @@ console.log(month);
 console.log(date);
 
 //Christmas
+window.addEventListener("load", function(){
+    requestAnimationFrame(fadeOut);
+});
+
+function fadeOut(){
+    var load_screen = document.getElementById("load_screen");
+    load_screen.style.opacity -= 0.1;
+
+    if(load_screen.style.opacity > 0) {
+        requestAnimationFrame(fadeOut);
+    }else{
+        document.body.removeChild(load_screen);
+    }
+}
+
 if(month = "December"){
     if (parseInt(date) >= 15 ) {
         console.log("Merry Christmas");
