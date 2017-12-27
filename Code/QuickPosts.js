@@ -24,7 +24,7 @@ document.getElementById("QuickPostDate").innerHTML=_QuickPosts[_QuickPosts.lengt
 
 document.getElementById("la_btn").setAttribute("disabled", "disabled");
 
-function nextQP(){
+document.getElementById("ra_btn").addEventListener("click", function(){
 
     document.getElementById("ra_btn").setAttribute("disabled", "disabled");
     document.getElementById("la_btn").removeAttribute("disabled");
@@ -43,10 +43,9 @@ function nextQP(){
         document.getElementById("QuickPostDate").innerHTML=_QuickPosts[_QuickPosts.length - 1 - currentQuickPost].currentDate;
 
     }
+});
 
-}
-
-function previousQP(){
+document.getElementById("la_btn").addEventListener("click", function(){
 
     document.getElementById("la_btn").setAttribute("disabled", "disabled");
     document.getElementById("ra_btn").removeAttribute("disabled");
@@ -67,4 +66,4 @@ function previousQP(){
 
     }
 
-}
+});
