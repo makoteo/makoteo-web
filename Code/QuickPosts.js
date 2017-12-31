@@ -11,9 +11,11 @@ console.log(_QuickPosts.length);
 
 //QuickPost Area
 
-_QuickPosts.push(new quickPost("Quick-Post Test!", "26/Dec/2017"));
-_QuickPosts.push(new quickPost("Merry Late Christmas now that I think about it!", "26/Dec/2017"));
-_QuickPosts.push(new quickPost("Finally done with these Quick-posts... They took 2 HOURS!", "26/Dec/2017"));
+_QuickPosts.push(new quickPost("Quick-Post Test!", "26th/Dec/2017"));
+_QuickPosts.push(new quickPost("Merry Late Christmas now that I think about it!", "26th/Dec/2017"));
+_QuickPosts.push(new quickPost("Finally done with these Quick-posts... They took 2 HOURS!", "26th/Dec/2017"));
+_QuickPosts.push(new quickPost("And just a random post on the 28th. (:", "28th/Dec/2017"));
+_QuickPosts.push(new quickPost("Happy last day of 2017!", "31st/Dec/2017"));
 
 //QuickPost Area
 

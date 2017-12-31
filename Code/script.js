@@ -35,9 +35,26 @@ if(month = "December"){
         document.getElementById("logo_santa_hat").removeAttribute("hidden");
         document.getElementById("foreground_ice").removeAttribute("hidden");
     }
+    if (parseInt(date) > 30 ) {
+        console.log("Nearly a Happy New Year");
+        document.getElementById("Night_Overlay").removeAttribute("hidden");
+        document.getElementById("FireWorks").removeAttribute("hidden");
+    }
 }else if(month = "January"){
     if (parseInt(date) <= 10 ) {
         console.log("Merry Christmas");
+        document.getElementById("Mountain_Ice").removeAttribute("hidden");
+        document.getElementById("snow1").removeAttribute("hidden");
+        document.getElementById("snow2").removeAttribute("hidden");
+        document.getElementById("snow3").removeAttribute("hidden");
+        document.getElementById("logo_ice").removeAttribute("hidden");
+        document.getElementById("logo_santa_hat").removeAttribute("hidden");
+        document.getElementById("foreground_ice").removeAttribute("hidden");
+    }
+    if (parseInt(date) < 2) {
+        console.log("Happy New Year");
+        document.getElementById("Night_Overlay").removeAttribute("hidden");
+        document.getElementById("FireWorks").removeAttribute("hidden");
     }
 }else{
 
