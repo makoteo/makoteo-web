@@ -16,6 +16,7 @@ _QuickPosts.push(new quickPost("Merry Late Christmas now that I think about it!"
 _QuickPosts.push(new quickPost("Finally done with these Quick-posts... They took 2 HOURS!", "26th/Dec/2017"));
 _QuickPosts.push(new quickPost("And just a random post on the 28th. (:", "28th/Dec/2017"));
 _QuickPosts.push(new quickPost("Happy end of 2017!", "31st/Dec/2017"));
+_QuickPosts.push(new quickPost("HAPPY NEW YEAR!!!", "1st/Jan/2018"));
 
 //QuickPost Area
 

@@ -2,10 +2,10 @@ var _els = document.getElementsByClassName('parallax');
 var _layers = [];
 var _scrollY = window.scrollY;
 
-var month = new Date().toLocaleString('en-En',{month: "long"});
+var currentmonth = new Date().toLocaleString('en-En',{month: "long"});
 var date = new Date().toLocaleString('en-En',{day: "numeric"});
 
-console.log(month);
+console.log(currentmonth);
 console.log(date);
 
 //Christmas
@@ -24,7 +24,7 @@ function fadeOut(){
     }
 }
 
-if(month = "December"){
+if(currentmonth = "December"){
     if (parseInt(date) >= 15 ) {
         console.log("Merry Christmas");
         document.getElementById("Mountain_Ice").removeAttribute("hidden");
@@ -35,12 +35,13 @@ if(month = "December"){
         document.getElementById("logo_santa_hat").removeAttribute("hidden");
         document.getElementById("foreground_ice").removeAttribute("hidden");
     }
-    if (parseInt(date) > 30 ) {
+    if (parseInt(date) >= 31 ) {
         console.log("Nearly a Happy New Year");
         document.getElementById("Night_Overlay").removeAttribute("hidden");
         document.getElementById("FireWorks").removeAttribute("hidden");
     }
-}else if(month = "January"){
+}
+if(currentmonth = "January"){
     if (parseInt(date) <= 10 ) {
         console.log("Merry Christmas");
         document.getElementById("Mountain_Ice").removeAttribute("hidden");
@@ -51,7 +52,7 @@ if(month = "December"){
         document.getElementById("logo_santa_hat").removeAttribute("hidden");
         document.getElementById("foreground_ice").removeAttribute("hidden");
     }
-    if (parseInt(date) < 2) {
+    if (parseInt(date) <= 1) {
         console.log("Happy New Year");
         document.getElementById("Night_Overlay").removeAttribute("hidden");
         document.getElementById("FireWorks").removeAttribute("hidden");
