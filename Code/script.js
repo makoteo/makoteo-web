@@ -2,11 +2,8 @@ var _els = document.getElementsByClassName('parallax');
 var _layers = [];
 var _scrollY = window.scrollY;
 
-var currentmonth = new Date().toLocaleString('en-En',{month: "long"});
+var theMonth = new Date().toLocaleString('en-En',{month: "long"});
 var date = new Date().toLocaleString('en-En',{day: "numeric"});
-
-console.log(currentmonth);
-console.log(date);
 
 //Christmas
 window.addEventListener("load", function(){
@@ -24,7 +21,8 @@ function fadeOut(){
     }
 }
 
-if(currentmonth = "December"){
+if(theMonth === "December"){
+    console.log("December");
     if (parseInt(date) >= 15 ) {
         console.log("Merry Christmas");
         document.getElementById("Mountain_Ice").removeAttribute("hidden");
@@ -41,7 +39,8 @@ if(currentmonth = "December"){
         document.getElementById("FireWorks").removeAttribute("hidden");
     }
 }
-if(currentmonth = "January"){
+if(theMonth === "January"){
+    console.log("January");
     if (parseInt(date) <= 10 ) {
         console.log("Merry Christmas");
         document.getElementById("Mountain_Ice").removeAttribute("hidden");
